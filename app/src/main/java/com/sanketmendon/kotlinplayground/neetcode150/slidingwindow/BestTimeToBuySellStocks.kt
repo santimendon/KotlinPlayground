@@ -10,10 +10,11 @@ fun main() {
 fun maxProfit(prices: IntArray): Int {
     var profit = 0
     var min = prices[0]
+
     for (price in prices) {
         min = Math.min(min, price)
-        val max = price - min
-        profit = Math.max(profit, max)
+        val currentProfit = price - min
+        profit = Math.max(profit, currentProfit)
     }
     return profit
 }
